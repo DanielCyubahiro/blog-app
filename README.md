@@ -1,12 +1,57 @@
-# React + Vite
+# Blog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern blog application built using React and Vite. This application allows users to create, edit, and manage blog posts seamlessly.
 
-Currently, two official plugins are available:
+## Features
+- 📝 Create, edit, and delete blog posts
+- 🔍 Search and filter blog posts
+- 🏷️ Categorize posts with tags
+- 🌙 Light/Dark mode support
+- 📱 Fully responsive design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **Frontend:** React, React Router, Context API, Vite
+- **Styling:** Tailwind CSS, Ant Design (Antd)
+- **State Management:** Redux (if used)
 
-## Expanding the ESLint configuration
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/DanielCyubahiro/blog-app.git
+   cd blog-app
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+```
+blog-app/
+│-- src/
+│   ├── components/   # Reusable components
+│   ├── pages/        # Page components
+│   ├── hooks/        # Custom hooks (if any)
+│   ├── context/      # Context API (if used)
+│   ├── assets/       # Images, icons, and styles
+│   ├── App.js        # Main application component
+│   ├── main.js       # Vite entry point
+│-- public/
+│-- package.json
+│-- README.md
+```
+
+## Contributing
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature-branch`)
+3. Commit changes (`git commit -m "Added new feature"`)
+4. Push to the branch (`git push origin feature-branch`)
+5. Open a Pull Request
+
+## Contact
+For any inquiries or feedback, reach out via [cyubahirodaniel@gmail.com].
+
