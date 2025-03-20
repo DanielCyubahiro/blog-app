@@ -14,15 +14,19 @@ const Post = ({post}) => {
           actions={[
             <EllipsisOutlined
                 key="ellipsis"
-                onClick={() => navigate('/post/' + post.id)}/>,
+                onClick={() => navigate('/posts/' + post.id)}/>,
           ]}
       >
         <Meta
-            avatar={<Avatar
-                src="https://api.dicebear.com/7.x/miniavs/svg?seed=8"/>}
+            avatar={
+              <Avatar
+                  src="https://api.dicebear.com/7.x/miniavs/svg?seed=8"
+              />
+            }
             title={post.title}
-            description={post.body.length < 25 ? post.body : post.body.slice(0,
-                70) + '...'}
+            description={
+              post.body.length < 25 ? post.body : post.body.slice(0, 70) + '...'
+            }
         />
       </Card>
   );
