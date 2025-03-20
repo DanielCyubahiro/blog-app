@@ -28,10 +28,10 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-                to="/posts"
+                to="/new-post"
                 style={{color: 'whitesmoke', textDecoration: 'none'}}
             >
-              Posts
+              Post
             </Link>
           </li>
           <li>
