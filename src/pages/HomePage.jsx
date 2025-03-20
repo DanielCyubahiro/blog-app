@@ -1,27 +1,7 @@
-import {useEffect, useState} from 'react';
-import axios from 'axios';
 import Post from '../components/Post.jsx';
 import {Empty, Spin} from 'antd';
 
-const HomePage = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    void (async () => {
-      try {
-        setLoading(true);
-        const response = await axios.get(
-            'https://jsonplaceholder.typicode.com/posts');
-        setPosts(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
+const HomePage = ({loading, posts}) => {
   return (
       <main>
         {!loading
@@ -29,7 +9,7 @@ const HomePage = () => {
                 ? (
                     posts.map((post) => (
                         <Post key={post.id} post={post}/>
-                    ))
+                    )).toReversed()
                 )
                 : <Empty
                     description={'No Posts to display'}
