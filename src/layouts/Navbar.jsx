@@ -1,4 +1,5 @@
 import {Input} from 'antd';
+import {Link} from 'react-router-dom';
 
 const {Search} = Input;
 
@@ -14,12 +15,33 @@ const Navbar = () => {
               paddingTop: '10px',
               paddingLeft: '15px',
             }}
-            size='large'
+            size="large"
         />
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Posts</li>
+          <li>
+            <Link
+                to="/"
+                style={{color: 'whitesmoke', textDecoration: 'none'}}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+                to="/posts"
+                style={{color: 'whitesmoke', textDecoration: 'none'}}
+            >
+              Posts
+            </Link>
+          </li>
+          <li>
+            <Link
+                to="/about"
+                style={{color: 'whitesmoke', textDecoration: 'none'}}
+            >
+              About
+            </Link>
+          </li>
         </ul>
       </nav>
   );
