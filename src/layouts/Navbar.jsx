@@ -1,15 +1,18 @@
 import {Input} from 'antd';
 import {Link} from 'react-router-dom';
 
-const {Search} = Input;
-
-const Navbar = () => {
+const Navbar = ({posts, setPosts}) => {
+  const {Search} = Input;
+  const onSearch = (input) => {
+    setPosts(posts.filter((post) => post.body.includes(input) ||
+        post.title.includes(input)));
+  };
   return (
       <nav>
         <Search
             placeholder="Search Posts"
             allowClear
-            // onSearch={onSearch}
+            onSearch={onSearch}
             style={{
               width: '90%',
               paddingTop: '10px',

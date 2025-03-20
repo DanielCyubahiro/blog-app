@@ -3,11 +3,11 @@ import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
 import {Outlet} from 'react-router-dom';
 
-const Layout = () => {
+const Layout = ({posts, setPosts}) => {
   return (
       <>
         <Header/>
-        <Navbar/>
+        <Navbar posts={posts} setPosts={setPosts}/>
         <Outlet/>
         <Footer/>
       </>
