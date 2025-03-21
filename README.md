@@ -1,57 +1,96 @@
-# Blog Application
+# React Blog App
 
-A modern blog application built using React and Vite. This application allows users to create, edit, and manage blog posts seamlessly.
+## Overview
+This is a simple blog application built using React to help understand and practice various features of the library. The app allows users to create, edit, delete, and view posts. It integrates React Router for navigation, Ant Design for UI components, and Axios for data fetching. The project follows a structured approach with reusable components and context for state management.
 
 ## Features
-- 📝 Create, edit, and delete blog posts
-- 🔍 Search and filter blog posts
-- 🏷️ Categorize posts with tags
-- 🌙 Light/Dark mode support
-- 📱 Fully responsive design
+- **React Router**: Implements navigation using `react-router-dom`.
+- **Context API**: Manages global state using React Context.
+- **Dynamic Routing**: Supports dynamic paths for viewing and editing posts.
+- **Fetching Data**: Uses Axios to fetch posts from an external API.
+- **UI Components**: Leverages Ant Design for styling and interactive components.
+- **State Management**: Utilizes `useState` and `useContext` for managing posts.
 
 ## Technologies Used
-- **Frontend:** React, React Router, Context API, Vite
-- **Styling:** Tailwind CSS, Ant Design (Antd)
-- **State Management:** Redux (if used)
+- React.js
+- React Router
+- Ant Design
+- Axios
+- JSONPlaceholder API (for mock data)
+
+## Project Structure
+```
+/src
+│── components
+│   ├── Post.jsx
+│── context
+│   ├── DataContext.jsx
+│── hooks
+│   ├── useAxiosFetch.js
+│── layouts
+│   ├── Layout.jsx
+│── pages
+│   ├── HomePage.jsx
+│   ├── PostPage.jsx
+│   ├── AboutPage.jsx
+│   ├── NotFoundPage.jsx
+│── App.jsx
+│── index.jsx
+│── styles.css
+```
 
 ## Installation
 1. Clone the repository:
    ```sh
    git clone https://github.com/DanielCyubahiro/blog-app.git
+   ```
+2. Navigate into the project directory:
+   ```sh
    cd blog-app
    ```
-2. Install dependencies:
+3. Install dependencies:
    ```sh
    npm install
    ```
-3. Start the development server:
+4. Start the development server:
    ```sh
-   npm run dev
+   npm start
    ```
 
-## Project Structure
-```
-blog-app/
-│-- src/
-│   ├── components/   # Reusable components
-│   ├── pages/        # Page components
-│   ├── hooks/        # Custom hooks (if any)
-│   ├── context/      # Context API (if used)
-│   ├── assets/       # Images, icons, and styles
-│   ├── App.js        # Main application component
-│   ├── main.js       # Vite entry point
-│-- public/
-│-- package.json
-│-- README.md
-```
+## Usage
+- Home Page: Displays a list of posts fetched from the API.
+- Post Page: Allows users to create and edit posts.
+- About Page: Provides information about the project.
+- Not Found Page: Handles undefined routes.
 
-## Contributing
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature-branch`)
-3. Commit changes (`git commit -m "Added new feature"`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Open a Pull Request
+## Key Files and Functionality
+### `App.jsx`
+- Defines routes and wraps the app with `DataProvider` for state management.
 
-## Contact
-For any inquiries or feedback, reach out via [cyubahirodaniel@gmail.com].
+### `DataContext.jsx`
+- Manages global state and provides post data using React Context.
+
+### `useAxiosFetch.js`
+- Custom hook to fetch data using Axios with cleanup handling.
+
+### `Post.jsx`
+- Renders individual posts with an option to navigate to post details.
+
+### `PostPage.jsx`
+- Handles creation and editing of posts using Ant Design forms.
+
+### `HomePage.jsx`
+- Displays posts with a loading spinner and empty state handling.
+
+### `NotFoundPage.jsx`
+- Displays a 404 error page for undefined routes.
+
+## Future Improvements
+- Add user authentication.
+- Implement pagination for posts.
+- Enhance UI with additional styling.
+- Use a backend database for persistent storage.
+
+---
+This app was built as a learning project to explore different React features including routing, context API, state management, and API integration.
 
