@@ -1,7 +1,11 @@
 import {Input} from 'antd';
 import {Link} from 'react-router-dom';
+import {useContext} from 'react';
+import DataContext from '../context/DataContext.jsx';
 
-const Navbar = ({posts, setPosts}) => {
+const Navbar = () => {
+  const {posts, setPosts} = useContext(DataContext);
+
   const {Search} = Input;
   const onSearch = (input) => {
     setPosts(posts.filter((post) => post.body.includes(input) ||

@@ -1,7 +1,11 @@
 import Post from '../components/Post.jsx';
 import {Empty, Spin} from 'antd';
+import {useContext} from 'react';
+import DataContext from '../context/DataContext.jsx';
 
-const HomePage = ({loading, posts}) => {
+const HomePage = () => {
+  const {posts, loading} = useContext(DataContext);
+
   return (
       <main>
         {!loading

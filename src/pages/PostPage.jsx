@@ -1,8 +1,10 @@
 import {Button, Form, Input} from 'antd';
 import {useNavigate, useParams} from 'react-router-dom';
-import {useEffect} from 'react';
+import {useContext, useEffect} from 'react';
+import DataContext from '../context/DataContext.jsx';
 
-const PostPage = ({posts, setPosts}) => {
+const PostPage = () => {
+  const {posts, setPosts} = useContext(DataContext);
   const [form] = Form.useForm();
   const navigate = useNavigate();
   const {id} = useParams();
