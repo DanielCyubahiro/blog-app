@@ -1,8 +1,6 @@
 import {Result} from 'antd';
-import {useNavigate} from 'react-router-dom';
 
 const NotFoundPage = () => {
-  const navigate = useNavigate();
   return (
       <Result
           status="404"
